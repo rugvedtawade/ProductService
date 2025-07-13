@@ -12,7 +12,6 @@ public class BaseModel {
     @Id // to tell that "id" field is Primary Key
     @GeneratedValue(strategy = GenerationType.AUTO) // to autogenarate id
     private long id;
-
     private Date createdAt;
     private  Date lastModifiedAt;
     private boolean isDeleted;

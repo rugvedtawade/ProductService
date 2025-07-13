@@ -1,5 +1,7 @@
 package com.scaler.productservice.models;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
@@ -13,6 +15,7 @@ public class Category extends BaseModel{
 
     //duplicate relation(already mentioned in product  - mappedBy = "category")
     @OneToMany(mappedBy = "category", cascade = {CascadeType.REMOVE})   // Cascade type is Foreign key constraint
+    @JsonIgnore
     private List<Product> products; //electronics
 
     public Category(String title, List<Product> products) {
