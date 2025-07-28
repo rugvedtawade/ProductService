@@ -18,7 +18,7 @@ public class productController
 
     public productController(@Qualifier("selfProductService") ProductService productService) // no need to write Fake store wala part , IOC will understand the current service
     {
-        this.productService = productService;       //creation of service object to call it
+        this.productService = productService;       //creation of service object to call it.
     }
 
 
